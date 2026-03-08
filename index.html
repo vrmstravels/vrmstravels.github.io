@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRMS Tour Travels | 10+ Years of Premium Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Colors Derived from Logo */
+            --logo-green: #2d5a27; 
+            --logo-gold: #d4af37;
+            --glass-white: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a3018, #2d5a27, #121212);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        /* --- Glass Navigation --- */
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            color: var(--logo-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- Hero & Booking Section --- */
+        .hero {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .experience-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: var(--logo-gold);
+            color: #000;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .glass-booking-box {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label { display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--logo-gold); }
+
+        input, select {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .btn-whatsapp {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(45deg, #25d366, #128c7e);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        /* --- Vehicle Section --- */
+        .fleet { display: flex; justify-content: center; gap: 20px; padding: 40px 5%; flex-wrap: wrap; }
+        
+        .vehicle-card {
+            background: var(--glass-white);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            width: 280px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        
+        .vehicle-card:hover { border-color: var(--logo-gold); }
+        .vehicle-card i { font-size: 2.5rem; color: var(--logo-gold); margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-text">VRMS TOUR TRAVELS</div>
+        <div style="font-size: 0.9rem;"><i class="fas fa-phone"></i> 9840541625</div>
+    </nav>
+
+    <section class="hero">
+        <span class="experience-badge">10+ YEARS OF TRUSTED SERVICE</span>
+        <h1 style="font-family: 'Montserrat'; font-size: 2.5rem;">Premium Cabs from Chennai</h1>
+        <p style="opacity: 0.8;">To Tamil Nadu Destinations & Bangalore</p>
+
+        <div class="glass-booking-box">
+            <h3 style="margin-top: 0; color: var(--logo-gold);">Quick Booking</h3>
+            
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" id="userName" placeholder="Enter your name">
+            </div>
+
+            <div class="input-group">
+                <label>Mobile Number</label>
+                <input type="tel" id="userPhone" placeholder="Enter mobile number">
+            </div>
+
+            <div class="input-group">
+                <label>Select Vehicle</label>
+                <select id="vehicleType">
+                    <option value="Executive Sedan">Executive Sedan (4+1)</option>
+                    <option value="Premium SUV">Premium SUV (6+1)</option>
+                </select>
+            </div>
+
+            <button class="btn-whatsapp" onclick="sendToWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Book via WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <div class="fleet">
+        <div class="vehicle-card">
+            <i class="fas fa-car"></i>
+            <h4>Executive Sedan</h4>
+            <p style="font-size: 0.8rem; opacity: 0.7;">Swift Dzire / Etios<br>Perfect for small families</p>
+        </div>
+        <div class="vehicle-card">
+            <i class="fas fa-suv"></i>
+            <h4>Premium SUV</h4>
+            <p style="font-size: 0.8rem; opacity: 0.7;">Innova Crysta / XUV<br>Luxury for long trips</p>
+        </div>
+    </div>
+
+    <script>
+        function sendToWhatsApp() {
+            const name = document.getElementById('userName').value;
+            const phone = document.getElementById('userPhone').value;
+            const vehicle = document.getElementById('vehicleType').value;
+
+            if(!name || !phone) {
+                alert("Please fill in your name and mobile number.");
+                return;
+            }
+
+            const message = `Hello VRMS Tour Travels!%0A%0A*Booking Inquiry*%0AName: ${name}%0AMobile: ${phone}%0AVehicle: ${vehicle}%0A%0AI want to book a cab from Chennai. Please provide the best quote.`;
+            
+            const whatsappURL = `https://wa.me/919840541625?text=${message}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+
+</body>
+</html>
