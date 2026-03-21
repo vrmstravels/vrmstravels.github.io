@@ -743,9 +743,15 @@ function sendToWhatsApp() {
   const destBlock = placeLines(selectedPlace.dest, isTa?'📍 செல்லும் இடம்':'📍 To');
   const startStr  = dtValues.start ? encodeURIComponent(dtValues.start) : na;
   const endStr    = dtValues.end   ? encodeURIComponent(dtValues.end)   : na;
+  // Build direction link only when both eLocs are available
+  const fromEloc = selectedPlace.from?.eloc;
+  const destEloc = selectedPlace.dest?.eloc;
+  const dirLine  = (fromEloc && destEloc)
+    ? `%0A%0A🗺️ ${isTa ? 'வழிகாட்டி' : 'Directions'}: https://mappls.com/direction?places=${fromEloc}%3B${destEloc}`
+    : '';
   const msg = isTa
-    ? `வணக்கம் VRMS டூர் டிராவல்ஸ்!%0A%0A*புதிய பதிவு*%0A%0A👤 பெயர்: ${encodeURIComponent(name)}%0A📱 கைபேசி: ${encodeURIComponent(phone)}%0A%0A${fromBlock}%0A${destBlock}%0A%0A📅 புறப்படும் நேரம்: ${startStr}%0A🏁 திரும்பும் நேரம்: ${endStr}%0A%0A🚗 வாகனம்: ${encodeURIComponent(vehicle)}%0A%0Aசிறந்த கட்டணம் தெரிவிக்கவும். நன்றி!`
-    : `Hello VRMS Tour Travels!%0A%0A*New Booking Inquiry*%0A%0A👤 Name: ${encodeURIComponent(name)}%0A📱 Mobile: ${encodeURIComponent(phone)}%0A%0A${fromBlock}%0A${destBlock}%0A%0A📅 Start: ${startStr}%0A🏁 Return: ${endStr}%0A%0A🚗 Vehicle: ${encodeURIComponent(vehicle)}%0A%0AKindly provide the best quote. Thank you!`;
+    ? `வணக்கம் VRMS டூர் டிராவல்ஸ்!%0A%0A*புதிய பதிவு*%0A%0A👤 பெயர்: ${encodeURIComponent(name)}%0A📱 கைபேசி: ${encodeURIComponent(phone)}%0A%0A${fromBlock}%0A${destBlock}${dirLine}%0A%0A📅 புறப்படும் நேரம்: ${startStr}%0A🏁 திரும்பும் நேரம்: ${endStr}%0A%0A🚗 வாகனம்: ${encodeURIComponent(vehicle)}%0A%0Aசிறந்த கட்டணம் தெரிவிக்கவும். நன்றி!`
+    : `Hello VRMS Tour Travels!%0A%0A*New Booking Inquiry*%0A%0A👤 Name: ${encodeURIComponent(name)}%0A📱 Mobile: ${encodeURIComponent(phone)}%0A%0A${fromBlock}%0A${destBlock}${dirLine}%0A%0A📅 Start: ${startStr}%0A🏁 Return: ${endStr}%0A%0A🚗 Vehicle: ${encodeURIComponent(vehicle)}%0A%0AKindly provide the best quote. Thank you!`;
   window.open(`https://wa.me/919840541625?text=${msg}`, '_blank');
 }
 </script>
