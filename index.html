@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VRMS Tour Travels | Taxi Service Chennai to Tamil Nadu & Bangalore</title>
-<meta name="description" content="Book reliable taxis from Chennai to Tamil Nadu destinations & Bangalore. VRMS Tour Travels- Trusted service. Executive Sedans & Premium SUVs. Call 9840541625.">
+<meta name="description" content="Book reliable taxis from Chennai to Tamil Nadu destinations & Bangalore. VRMS Tour Travels - Trusted service. Maruti Swift Dzire & Toyota Innova Hycross. Call 9840541625.">
 <meta name="keywords" content="taxi service Chennai, taxi Chennai, Chennai to Bangalore taxi, Chennai to Tamil Nadu taxi, outstation taxi Chennai, book taxi Chennai, VRMS Tour Travels">
 <meta name="author" content="VRMS Tour Travels">
 <meta name="robots" content="index, follow">
@@ -373,8 +373,8 @@ footer a { color: var(--gold); }
     <div class="input-group">
       <label data-en="Select Vehicle" data-ta="வாகனம் தேர்வு செய்க">Select Vehicle</label>
       <select id="vehicleType">
-        <option data-en="Executive Sedan – Swift Dzire / Etios (4+1)" data-ta="எக்ஸிகியூட்டிவ் செடான் – ஸ்விஃப்ட் டிசைர் / எட்டியோஸ் (4+1)">Executive Sedan – Swift Dzire / Etios (4+1)</option>
-        <option data-en="Premium SUV – Innova Crysta / XUV (6+1)" data-ta="பிரீமியம் SUV – இன்னோவா கிரிஸ்டா / XUV (6+1)">Premium SUV – Innova Crysta / XUV (6+1)</option>
+        <option data-en="Maruti Swift Dzire – Sedan (4+1)" data-ta="மாருதி ஸ்விஃப்ட் டிசைர் – செடான் (4+1)">Maruti Swift Dzire – Sedan (4+1)</option>
+        <option data-en="Toyota Innova Hycross – Premium SUV (6+1)" data-ta="டொயோட்டா இன்னோவா ஹைக்ராஸ் – பிரீமியம் SUV (6+1)">Toyota Innova Hycross – Premium SUV (6+1)</option>
       </select>
     </div>
 
@@ -385,19 +385,195 @@ footer a { color: var(--gold); }
   </div>
 </section>
 
-<h2 class="section-title" data-en="Our Fleet" data-ta="எங்கள் வாகனங்கள்">Our Fleet</h2>
-<div class="fleet">
-  <div class="vehicle-card">
-    <i class="fas fa-car"></i>
-    <h4 data-en="Executive Sedan" data-ta="எக்ஸிகியூட்டிவ் செடான்">Executive Sedan</h4>
-    <p data-en="Swift Dzire / Etios<br>Perfect for small families &amp; solo trips" data-ta="ஸ்விஃப்ட் டிசைர் / எட்டியோஸ்<br>சிறிய குடும்பங்களுக்கு ஏற்றது">Swift Dzire / Etios<br>Perfect for small families &amp; solo trips</p>
+<!-- ══ FLEET PHOTO GALLERY ══ -->
+<style>
+.trust-bar{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 24px;padding:20px 5% 8px;border-top:1px solid var(--glass-border);}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:0.78rem;opacity:.85;}
+.trust-item i{color:var(--gold);}
+.gallery-wrap{padding:8px 5% 32px;}
+.gallery-head{text-align:center;margin-bottom:18px;}
+.gallery-head h2{font-family:'Montserrat',sans-serif;color:var(--gold);font-size:1.3rem;margin-bottom:4px;}
+.gallery-head p{font-size:0.8rem;opacity:.6;}
+.fleet-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:800px;margin:0 auto;}
+@media(max-width:600px){.fleet-photos{grid-template-columns:1fr;}}
+.fp{position:relative;overflow:hidden;border-radius:14px;border:1px solid rgba(255,255,255,0.08);cursor:pointer;transition:transform .3s,border-color .3s;}
+.fp:hover{transform:translateY(-5px);border-color:var(--gold);}
+.fp img{width:100%;height:220px;object-fit:cover;object-position:center;display:block;transition:transform .5s;}
+.fp:hover img{transform:scale(1.06);}
+.fp-info{position:absolute;bottom:0;left:0;right:0;padding:14px 14px 12px;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);}
+.fp-title{font-family:'Montserrat',sans-serif;font-size:.8rem;font-weight:700;color:#fff;}
+.fp-sub{font-size:.65rem;color:var(--gold);margin-top:2px;}
+.fp-badge{position:absolute;top:10px;right:10px;background:var(--gold);color:#000;font-size:.6rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em;text-transform:uppercase;}
+#lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:9999;align-items:center;justify-content:center;flex-direction:column;}
+#lb.open{display:flex;}
+#lb img{max-width:92vw;max-height:82vh;border-radius:10px;object-fit:contain;}
+#lb .lbc{color:rgba(255,255,255,.65);font-size:.8rem;margin-top:10px;}
+#lb .lbx{position:absolute;top:16px;right:20px;background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;opacity:.7;}
+#lb .lbx:hover{opacity:1;}
+</style>
+
+<div class="trust-bar">
+  <div class="trust-item"><i class="fas fa-shield-alt"></i> <span data-en="Verified &amp; Insured" data-ta="சரிபார்க்கப்பட்டது &amp; காப்பீடு செய்யப்பட்டது">Verified &amp; Insured</span></div>
+  <div class="trust-item"><i class="fas fa-user-tie"></i> <span data-en="Professional Drivers" data-ta="தொழில்முறை ஓட்டுநர்கள்">Professional Drivers</span></div>
+  <div class="trust-item"><i class="fas fa-star"></i> <span data-en="Clean &amp; Well-Maintained" data-ta="சுத்தமான &amp; பராமரிக்கப்பட்ட வாகனங்கள்">Clean &amp; Well-Maintained</span></div>
+
+</div>
+
+<div class="gallery-wrap">
+  <div class="gallery-head">
+    <h2 data-en="Our Real Fleet — See Before You Book" data-ta="எங்கள் உண்மையான வாகனங்கள் — பதிவு செய்வதற்கு முன் பாருங்கள்">Our Real Fleet — See Before You Book</h2>
+
   </div>
-  <div class="vehicle-card">
-    <i class="fas fa-truck-pickup"></i>
-    <h4 data-en="Premium SUV" data-ta="பிரீமியம் SUV">Premium SUV</h4>
-    <p data-en="Innova Crysta / XUV<br>Comfort &amp; luxury for long trips" data-ta="இன்னோவா கிரிஸ்டா / XUV<br>நீண்ட பயணத்திற்கு ஆடம்பரம்">Innova Crysta / XUV<br>Comfort &amp; luxury for long trips</p>
+  <div class="fleet-photos">
+
+    <!-- Vehicle 1: Maruti Swift Dzire -->
+    <div class="fp" onclick="openLB('https://vrmstravels.com/swift_dzire.jpg','Maruti Swift Dzire · Sedan · Outstation &amp; City Rides')">
+      <img src="https://vrmstravels.com/swift_dzire.jpg" alt="Maruti Swift Dzire sedan">
+      <div class="fp-badge" data-en="Sedan" data-ta="செடான்">Sedan</div>
+      <div class="fp-info">
+        <div class="fp-title">Maruti Swift Dzire</div>
+        <div class="fp-sub" data-en="4+1 Seater · Petrol · AC" data-ta="4+1 இருக்கைகள் · பெட்ரோல் · AC">4+1 Seater · Petrol · AC</div>
+      </div>
+    </div>
+
+    <!-- Vehicle 2: Toyota Innova Hycross -->
+    <div class="fp" onclick="openLB('https://vrmstravels.com/swift_dzire.jpg.jpg','Toyota Innova Hycross · Premium SUV · Wedding &amp; Outstation')">
+      <img src="https://vrmstravels.com/Innova.jpg" alt="Toyota Innova Hycross SUV">
+      <div class="fp-badge" data-en="Premium SUV" data-ta="பிரீமியம் SUV">Premium SUV</div>
+      <div class="fp-info">
+        <div class="fp-title">Toyota Innova Hycross</div>
+        <div class="fp-sub" data-en="6+1 Seater · Hybrid · AC" data-ta="6+1 இருக்கைகள் · ஹைபிரிட் · AC">6+1 Seater · Hybrid · AC</div>
+      </div>
+    </div>
+
   </div>
 </div>
+
+<!-- ══ INSTAGRAM VIDEOS SECTION ══ -->
+<style>
+.insta-section{padding:8px 5% 40px;}
+.insta-head{text-align:center;margin-bottom:20px;}
+.insta-head h2{font-family:'Montserrat',sans-serif;color:var(--gold);font-size:1.3rem;margin-bottom:14px;}
+.insta-head .insta-handle{display:inline-flex;align-items:center;gap:10px;margin-top:4px;color:#fff;font-size:1rem;font-weight:600;text-decoration:none;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);padding:12px 26px;border-radius:50px;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 18px rgba(220,39,67,0.35);}
+.insta-handle:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(220,39,67,0.5);}
+.insta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+@media(max-width:640px){.insta-grid{grid-template-columns:1fr;}}
+.reel-card{display:block;text-decoration:none;border-radius:14px;overflow:hidden;background:var(--glass);border:1px solid var(--glass-border);transition:transform .3s,border-color .3s;}
+.reel-card:hover{transform:translateY(-5px);border-color:var(--gold);}
+.reel-thumb{position:relative;width:100%;aspect-ratio:1/1;overflow:hidden;background:#111;}
+.reel-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
+.reel-card:hover .reel-thumb img{transform:scale(1.06);}
+.reel-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,rgba(0,0,0,.15) 50%,rgba(0,0,0,.3) 100%);display:flex;align-items:center;justify-content:center;}
+.reel-play{width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,0.18);backdrop-filter:blur(4px);border:2px solid rgba(255,255,255,0.5);display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;}
+.reel-card:hover .reel-play{background:rgba(220,39,67,0.75);transform:scale(1.12);}
+.reel-badge{position:absolute;top:10px;left:10px;background:linear-gradient(135deg,#f09433,#dc2743,#bc1888);color:#fff;font-size:0.65rem;font-weight:700;padding:3px 8px;border-radius:50px;display:flex;align-items:center;gap:4px;letter-spacing:.03em;}
+.reel-info{padding:10px 12px 12px;display:flex;justify-content:space-between;align-items:center;}
+.reel-handle{font-size:0.72rem;color:rgba(255,255,255,0.6);}
+.reel-cta{font-size:0.7rem;color:var(--gold);font-weight:600;}
+</style>
+
+<section class="insta-section">
+  <div class="insta-head">
+    <h2 data-en="Watch Us in Action" data-ta="எங்கள் சேவையை நேரில் பாருங்கள்">Watch Us in Action</h2>
+    <a class="insta-handle" href="https://www.instagram.com/vrms_tour_travels_groups/" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="url(#ig-grad)" style="flex-shrink:0">
+        <defs>
+          <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#f09433"/>
+            <stop offset="25%" style="stop-color:#e6683c"/>
+            <stop offset="50%" style="stop-color:#dc2743"/>
+            <stop offset="75%" style="stop-color:#cc2366"/>
+            <stop offset="100%" style="stop-color:#bc1888"/>
+          </linearGradient>
+        </defs>
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+      <span data-en="@vrms_tour_travels_groups" data-ta="எங்கள் பக்கம் காண்க">@vrms_tour_travels_groups</span>
+    </a>
+  </div>
+
+  <div class="insta-grid">
+
+    <a class="reel-card" href="https://www.instagram.com/reel/DUubo6aE0UI/" target="_blank" rel="noopener">
+      <div class="reel-thumb">
+        <img id="thumb-reel1" src="" style="background:#1a1a1a;"
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/reel1/400/400';"
+             alt="VRMS Reel 1" loading="lazy">
+        <div class="reel-overlay">
+          <div class="reel-play">
+            <svg viewBox="0 0 24 24" fill="white" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="reel-badge">
+            <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span data-en="Reel" data-ta="ரீல்">Reel</span>
+          </div>
+        </div>
+      </div>
+      <div class="reel-info">
+        <span class="reel-handle" data-en="@vrms_tour_travels_groups" data-ta="@vrms_tour_travels_groups">@vrms_tour_travels_groups</span>
+        <span class="reel-cta" data-en="Watch on Instagram ↗" data-ta="இன்ஸ்டாகிராமில் பாருங்கள் ↗">Watch on Instagram ↗</span>
+      </div>
+    </a>
+
+    <a class="reel-card" href="https://www.instagram.com/reel/DUOotrCk7qc/" target="_blank" rel="noopener">
+      <div class="reel-thumb">
+        <img id="thumb-reel2" src="" style="background:#1a1a1a;"
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/reel2/400/400';"
+             alt="VRMS Reel 2" loading="lazy">
+        <div class="reel-overlay">
+          <div class="reel-play">
+            <svg viewBox="0 0 24 24" fill="white" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="reel-badge">
+            <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span data-en="Reel" data-ta="ரீல்">Reel</span>
+          </div>
+        </div>
+      </div>
+      <div class="reel-info">
+        <span class="reel-handle" data-en="@vrms_tour_travels_groups" data-ta="@vrms_tour_travels_groups">@vrms_tour_travels_groups</span>
+        <span class="reel-cta" data-en="Watch on Instagram ↗" data-ta="இன்ஸ்டாகிராமில் பாருங்கள் ↗">Watch on Instagram ↗</span>
+      </div>
+    </a>
+
+    <a class="reel-card" href="https://www.instagram.com/reel/DTN9dNRE76L/" target="_blank" rel="noopener">
+      <div class="reel-thumb">
+        <img id="thumb-reel3" src="" style="background:#1a1a1a;"
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/reel3/400/400';"
+             alt="VRMS Reel 3" loading="lazy">
+        <div class="reel-overlay">
+          <div class="reel-play">
+            <svg viewBox="0 0 24 24" fill="white" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="reel-badge">
+            <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span data-en="Reel" data-ta="ரீல்">Reel</span>
+          </div>
+        </div>
+      </div>
+      <div class="reel-info">
+        <span class="reel-handle" data-en="@vrms_tour_travels_groups" data-ta="@vrms_tour_travels_groups">@vrms_tour_travels_groups</span>
+        <span class="reel-cta" data-en="Watch on Instagram ↗" data-ta="இன்ஸ்டாகிராமில் பாருங்கள் ↗">Watch on Instagram ↗</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+<!-- After adding embed codes, add this script once at the bottom of body: -->
+<!-- <script async src="//www.instagram.com/embed.js"></script> -->
+
+<div id="lb" onclick="closeLB()">
+  <button class="lbx" onclick="closeLB()">&#x2715;</button>
+  <img id="lb-img" src="" alt="">
+  <div class="lbc" id="lb-cap"></div>
+</div>
+<script>
+function openLB(s,c){document.getElementById('lb-img').src=s;document.getElementById('lb-cap').textContent=c;document.getElementById('lb').classList.add('open');event.stopPropagation();}
+function closeLB(){document.getElementById('lb').classList.remove('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB();});
+</script>
+
+
 
 <section class="destinations">
   <h2 class="section-title" style="margin:0 0 6px;" data-en="Popular Routes from Chennai" data-ta="சென்னையிலிருந்து பிரபலமான பாதைகள்">Popular Routes from Chennai</h2>
@@ -754,6 +930,35 @@ function sendToWhatsApp() {
     : `Hello VRMS Tour Travels!%0A%0A*New Booking Inquiry*%0A%0A👤 Name: ${encodeURIComponent(name)}%0A📱 Mobile: ${encodeURIComponent(phone)}%0A%0A${fromBlock}%0A${destBlock}${dirLine}%0A%0A📅 Start: ${startStr}%0A🏁 Return: ${endStr}%0A%0A🚗 Vehicle: ${encodeURIComponent(vehicle)}%0A%0AKindly provide the best quote. Thank you!`;
   window.open(`https://wa.me/919840541625?text=${msg}`, '_blank');
 }
+</script>
+
+<script>
+(function(){
+  var reels = [
+    {id:'reel1', url:'https://www.instagram.com/reel/DUubo6aE0UI/'},
+    {id:'reel2', url:'https://www.instagram.com/reel/DUOotrCk7qc/'},
+    {id:'reel3', url:'https://www.instagram.com/reel/DTN9dNRE76L/'}
+  ];
+  reels.forEach(function(r){
+    var img = document.getElementById('thumb-'+r.id);
+    if(!img) return;
+    // Show a gradient placeholder while loading
+    img.style.background = 'linear-gradient(135deg,#1a2a1a,#0d1a0d)';
+    // Fetch real thumbnail via Instagram oEmbed (public, no auth needed)
+    fetch('https://www.instagram.com/oembed/?url='+encodeURIComponent(r.url)+'&maxwidth=600')
+      .then(function(res){ return res.json(); })
+      .then(function(data){
+        if(data && data.thumbnail_url){
+          img.src = data.thumbnail_url;
+          img.style.background = '';
+        }
+      })
+      .catch(function(){
+        // Fallback: show gradient with play icon if fetch fails
+        img.style.background = 'linear-gradient(135deg,#1e3d1a,#0f1f0d)';
+      });
+  });
+})();
 </script>
 </body>
 </html>
